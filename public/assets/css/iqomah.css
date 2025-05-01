@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'DS-Digital';
+    src: url('../font/dsdigital/DS-DIGIT.TTF')
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000d19;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.iqomah {
+    color: #868686;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.iqomah h2 {
+    font-size: 2.5em;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.iqomah h1 {
+    font-family: 'DS-Digital';
+    font-size: 12em;
+    font-weight: bold;
+    width: 100%;
+}

@@ -1,0 +1,370 @@
+:root {
+    --primary-color: #213448;
+    --secondary-color: #057DAD;
+    --red-color: #7D0A0A;
+    --white-color: #fff;
+    --light-blue-color: #ECFAFF;
+    --grey-color: #E6E6E6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: var(--white-color);
+}
+
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* z-index: 1; */
+}
+
+.navbar {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid var(--secondary-color);
+    /* background-color: var(--light-blue-color); */
+    /* background:
+        linear-gradient(to bottom,
+            rgba(5, 168, 8, 0.1),
+            /* var(--primary-color) dengan opacity 0.8 */
+    /* rgba(225, 255, 34, 0.1) */
+    /* var(--secondary-color) dengan opacity 0.6 */
+    /* ), */
+    /* url('/assets/img/patterns/floral-pattern.jpg') no-repeat center center; */
+    /* background-size: cover; */
+
+    /* position: relative; */
+
+}
+
+/* .navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: -1;
+} */
+
+.navbar-brand {
+    padding: 0 25px;
+}
+
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navbar-nav .nav-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav .nav-alamat {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-alamat .nav-alamatFirst {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 3px rgba(86, 86, 86, 0.3);
+}
+
+.navbar-nav .nav-alamat .nav-alamatSecond {
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+
+
+.content {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.content .prayer {
+    width: 100%;
+    height: 12%;
+}
+
+.currentPrayer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+    /* padding: 0 5px; */
+}
+
+.currentPrayer .currentFirst {
+    height: 100%;
+    border: 1px solid var(--grey-color);
+    border-radius: 5px;
+    flex: 1;
+}
+
+.currentPrayer .currentFirst .prayerName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.currentPrayer .prayerName img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.currentPrayer .prayer-time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.currentPrayer .currentFirst.active {
+    background-color: var(--light-blue-color);
+
+}
+
+.currentPrayer .currentFirst {
+    background-color: var(--white-color);
+    height: 100%;
+    border: 1px solid var(--grey-color);
+    border-radius: 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+
+}
+
+.currentPrayer .currentFirst.active .prayerName,
+.currentPrayer .currentFirst.active .prayer-time {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.currentPrayer .currentFirst .prayerName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.currentPrayer .currentFirst .prayer-time {
+    color: var(--primary-color);
+}
+
+.prayerTime {
+    text-align: center;
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    width: 20%;
+    height: 100%;
+}
+
+.prayerTime h1 {
+    font-size: 1.5rem;
+    margin-bottom: 3px;
+}
+
+.prayerTime h2 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+
+#hijri-date {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--white-color);
+}
+
+
+
+.content .custom-slider {
+    position: relative;
+    width: 100%;
+    height: 88%;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: 0 auto;
+}
+
+.slider-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slider-item {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.custom-slider.fade .slider-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.custom-slider.fade .slider-inner {
+    display: block;
+}
+
+.custom-slider.fade .slider-item.active {
+    opacity: 1;
+    position: relative;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.footer {
+    height: 10%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.marquee {
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 50s linear infinite;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--white-color);
+    line-height: normal;
+}
+
+.marquee img {
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.footer-timer {
+    height: 100%;
+    width: 12%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--light-blue-color);
+    border-top-right-radius: 15px;
+    background-color: var(--red-color);
+    color: var(--white-color);
+}
+
+.footer-timer #countdown {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.footer-holiday {
+    height: 100%;
+    width: 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--light-blue-color);
+    border-top-left-radius: 15px;
+}
+
+.footer-holiday span {
+    font-size: 18px;
+    color: var(--white-color);
+}
+
+.footer-holiday .holiday-countdown {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.footer-holiday p {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+.hidden {
+    display: none !important;
+}

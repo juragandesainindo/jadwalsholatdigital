@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d1d1d1;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+}
+
+.prayer-times {
+    display: flex;
+    justify-content: space-between;
+    background-color: #007a8b;
+    color: white;
+    padding: 10px;
+}
+
+.break {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.notification {
+    background-color: #f9d86b;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.footer {
+    margin-top: 20px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.footer h6 {
+    margin: 10px 0;
+}
+
+.footer p {
+    margin: 5px 0;
+}

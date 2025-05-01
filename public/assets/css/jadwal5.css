@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    max-width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #13A895;
+    color: #fff;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    height: 10%;
+    background-color: #ffffff;
+    padding: 0 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.navbar-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex: 1; */
+    /* padding: 0 20px; */
+    padding-left: 20px;
+}
+
+.navbar-title h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007061;
+}
+
+.navbar-title p {
+    font-size: 1rem;
+    color: #13A895;
+}
+
+.navbar-time {
+    display: flex;
+    align-items: center;
+    color: #007061;
+    font-weight: bold;
+    gap: 20px;
+}
+
+.navbar-date p {
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+.navbar-oclock h2 {
+    font-size: 3rem;
+    text-align: right;
+    padding-left: 20px;
+}
+
+.content {
+    height: 90%;
+    display: flex;
+}
+
+.content-start {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 10px;
+}
+
+.content-start .prayer {
+    background-color: #ffffff;
+    border-radius: 5px;
+    flex: 1;
+    /* <--- Ini penting, biar tinggi tiap item rata */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0;
+    /* Buat padding manual kalau butuh */
+}
+
+.content-start .prayer p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.content-start .prayer h3 {
+    color: #007061;
+    font-size: 2.5rem;
+    /* margin-top: 5px; */
+}
+
+.content-start .prayer-countdown {
+    background-color: #007061;
+}
+
+.content-start .prayer-countdown p,
+.content-start .prayer-countdown h3 {
+    color: #fff;
+}
+
+.content-start .prayer-countdown h3 {
+    font-size: 2rem;
+}
+
+/* tambahan untuk kedip 5 menit waktu sholat */
+
+.prayer.soon {
+    animation: blink 1s infinite;
+    background-color: #ffeeee !important;
+}
+
+.prayer.soon h3 {
+    color: #ff0000 !important;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.content-end {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding: 10px 10px 0 0; */
+}
+
+.content-end .carousel {
+    width: 99%;
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* margin: 10px 20px 0 0; */
+    margin-top: 10px;
+    /* margin-right: 50px; */
+
+    position: relative;
+    /* Shadow lembut dan elegan */
+}
+
+.carousel-inner {
+    /* display: flex;
+    transition: transform 0.5s ease-in-out; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    /* min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* .content-end .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+} */
+.content-end .card-countdown {
+    width: 99%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+    margin-right: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-end .card-countdown h1 {
+    color: #fff;
+}
+
+.content-end .card-countdown h2 {
+    color: #fff;
+}
+
+.content-end .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-top-left-radius: 12px;
+    /* padding: 10px 10px; */
+    margin-top: 10px;
+    color: #007061;
+    padding-left: 10px;
+}
+
+.footer .running-text {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    height: 40px;
+    /* Atur tinggi sesuai kebutuhan */
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.scroll-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 50s linear infinite;
+}
+
+.scroll-content h4 {
+    display: inline;
+    font-size: 3rem;
+    color: #007061;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+
+.footer .running-text img {
+    height: 25px;
+}
+
+.footer .logo {
+    border: 5px solid #13A895;
+    background-color: #fff;
+    text-align: center;
+    padding: 5px 25px;
+    border-top: 3px solid #ffffff;
+    /* border-radius: 12px 0 0 0; */
+}
+
+.footer .logo img {
+    height: 40px;
+}
+
+/* Animasi running text */
+@keyframes scrollText {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
